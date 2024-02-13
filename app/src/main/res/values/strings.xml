@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AudiobookTest</string>
+
+    <!--    Main screen-->
+    <string name="choose">Choose type of audiobook</string>
+    <string name="read_text">Read Text</string>
+    <string name="play_audio">Play Audio</string>
+</resources>

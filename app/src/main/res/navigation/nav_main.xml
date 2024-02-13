@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/startUpScreenFragment">
+
+    <fragment
+        android:id="@+id/startUpScreenFragment"
+        android:name="com.test.audiobooktest.ui.startScreen.view.StartUpScreenFragment"
+        android:label="StartUpScreenFragment"
+        tools:layout="@layout/fragment_start_up_screen">
+        <action
+            android:id="@+id/action_startUpScreenFragment_to_audioPlayerFragment"
+            app:destination="@id/audioPlayerFragment" />
+        <action
+            android:id="@+id/action_startUpScreenFragment_to_readTextFragment"
+            app:destination="@id/readTextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/audioPlayerFragment"
+        android:name="com.test.audiobooktest.ui.audioPlayer.view.AudioPlayerFragment"
+        android:label="AudioPlayerFragment"
+        tools:layout="@layout/fragment_audio_player"/>
+    <fragment
+        android:id="@+id/readTextFragment"
+        android:name="com.test.audiobooktest.ui.textHighlight.view.ReadTextFragment"
+        android:label="ReadTextFragment"
+        tools:layout="@layout/fragment_read_text"/>
+</navigation>
