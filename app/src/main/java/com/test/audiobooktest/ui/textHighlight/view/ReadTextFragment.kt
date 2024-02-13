@@ -116,7 +116,6 @@ class ReadTextFragment : Fragment() {
         binding.textToRead.text = spannableString
     }
 
-
     override fun onDestroy() {
         super.onDestroy()
         textToSpeech.stop()

@@ -90,10 +90,12 @@ class AudioPlayerFragment : Fragment() {
             textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, params)
         }
     }
+
     private fun pausePlayback() {
         textToSpeech.stop()
         pausedPosition += previousPause
     }
+
     override fun onDestroy() {
         super.onDestroy()
         textToSpeech.stop()
