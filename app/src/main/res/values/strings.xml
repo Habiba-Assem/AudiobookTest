@@ -10,4 +10,7 @@
     <string name="dummy_text">Audiobooks are audio recordings of books, enabling listeners to enjoy literary content through spoken word rather than traditional reading. Narrated by professionals, these recordings provide a convenient option for those with busy lifestyles or visual impairments. They offer a versatile listening experience, allowing individuals to immerse themselves in literature while engaging in daily activities. Accessible through digital platforms, audiobooks have become increasingly popular, offering a diverse range of titles to suit various tastes and preferences.</string>
     <string name="play">Play</string>
     <string name="stop">Stop</string>
+
+<!--    Play audio screen-->
+    <string name="pause">Pause</string>
 </resources>
