@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="primary">#E91E63</color>
     <color name="primary_80">#CCE91E63</color>
-    <color name="primary_10">#1AE91E63</color>
+    <color name="primary_5">#0DE91E63</color>
     <color name="background">#F9FAFA</color>
     <color name="transparent">#00F0EBE0</color>
     <color name="dark_gray">#333333</color>
@@ -40,5 +40,5 @@
     <color name="green">#33B679</color>
     <color name="light_gray">#DFDFDF</color>
     <color name="light_shade_gray">#EBEBEB</color>
-    <color name="golden">#FFD700</color>
+    <color name="golden">#80FFD700</color>
 </resources>
