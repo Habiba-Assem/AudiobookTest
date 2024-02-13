@@ -4,11 +4,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.test.passkeyapp.R
-import com.test.passkeyapp.databinding.ActivityMainBinding
-import timber.log.Timber
+import com.test.audiobooktest.R
+import com.test.audiobooktest.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 
@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initUi()
-
     }
 
     private fun initUi() {

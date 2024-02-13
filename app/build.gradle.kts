@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.test.passkeyapp"
+    namespace = "com.test.audiobooktest"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.test.passkeyapp"
+        applicationId = "com.test.audiobooktest"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
