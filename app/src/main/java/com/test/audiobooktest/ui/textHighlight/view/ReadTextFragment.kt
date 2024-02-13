@@ -90,16 +90,15 @@ class ReadTextFragment : Fragment() {
 
             override fun onRangeStart(utteranceId: String?, start: Int, end: Int, frame: Int) {
                 // Highlight the word being read
+                highlightWord(start + pausedPosition, end + pausedPosition)
                 previousPause = end
-                highlightWord(start, end)
             }
         })
     }
 
     private fun pauseReading() {
         textToSpeech.stop()
-//        pausedPosition += previousPause
-
+        pausedPosition += previousPause
     }
 
     private fun highlightWord(start: Int, end: Int) {
