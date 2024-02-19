@@ -59,12 +59,13 @@ class ReadTextFragment : Fragment() {
     }
 
     private fun startReading(text: String) {
-        val params = hashMapOf(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID to "utteranceId")
+        val params = Bundle()
+        params.putString(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "utteranceId")
         if (pausedPosition != 0) {
             val secondHalf = text.substring(pausedPosition)
-            textToSpeech.speak(secondHalf, TextToSpeech.QUEUE_FLUSH, params)
+            textToSpeech.speak(secondHalf, TextToSpeech.QUEUE_FLUSH, params,"utteranceId")
         } else {
-            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, params)
+            textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, params,"utteranceId")
         }
     }
 
