@@ -20,14 +20,14 @@ jobs:
       - name: Build Debug apk
         run: ./gradlew assembleDebug --stacktrace
 
-      - name: Get release file apk path
-        id: releaseApk
-        run: echo "apkfile=$(find app/build/outputs/apk/release/*.apk)" >> $GITHUB_OUTPUT
+      # - name: Get debug file apk path
+      #   id: debugApk
+      #   run: echo "apkfile=$(find app/build/outputs/apk/debug/*.apk)" >> $GITHUB_OUTPUT
 
       - name: Upload a file to Google Drive
         uses: willo32/google-drive-upload-action@v1
         with:
-          target: ${{ steps.releaseApk.outputs.apkfile }}
+          target: app/build/outputs/apk/debug/app-debug.apk
           credentials: ${{ secrets.GOOGLE_TOKEN }}
           parent_folder_id: 1YqixTzEtUJKCUpHaG_5I0Gl8tE4Vx7rx
-          name: "Release_test.apk"
+         
