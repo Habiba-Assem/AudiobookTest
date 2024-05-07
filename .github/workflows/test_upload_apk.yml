@@ -30,8 +30,9 @@ jobs:
         with:
           target: ${{ steps.releaseApk.outputs.apkfile }}
           credentials: ${{ secrets.GOOGLE_TOKEN }}
+          filename: "Release_test.apk"
           parent_folder_id: 1YqixTzEtUJKCUpHaG_5I0Gl8tE4Vx7rx
-          name: Release_test.apk
+          name: "Release_test.apk"
 
       # - name: Post to a Slack channel
       #   id: slack
