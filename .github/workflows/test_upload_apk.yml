@@ -40,11 +40,15 @@ jobs:
           RELEASE_KEYSTORE_ALIAS: ${{ secrets.KEY_ALIAS }}
           RELEASE_KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: ./gradlew assembleRelease --stacktrace
-
+        
+      - name: Get release file apk path
+        id: releaseApk
+        run: echo "apkfile=$(find app/build/outputs/apk/release/*.apk)" >> $GITHUB_OUTPUT
+        
       - name: Upload a file to Google Drive
         uses: willo32/google-drive-upload-action@v1
         with:
-          target: app/build/outputs/apk/release/app-release.apk
+          target: ${{ steps.releaseApk.outputs.apkfile }}
           credentials: ${{ secrets.GOOGLE_TOKEN }}
           parent_folder_id: 1YqixTzEtUJKCUpHaG_5I0Gl8tE4Vx7rx
          
