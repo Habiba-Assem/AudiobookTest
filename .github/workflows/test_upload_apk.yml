@@ -34,12 +34,8 @@ jobs:
       #       echo $ENCODED_STRING > keystore-b64.txt
       #       base64 -d keystore-b64.txt > keystore.jks
             
-      # - name: Build Release apk
-      #   env:
-      #     RELEASE_KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-      #     RELEASE_KEYSTORE_ALIAS: ${{ secrets.KEY_ALIAS }}
-      #     RELEASE_KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-      #   run: ./gradlew assembleRelease --stacktrace
+      - name: Build Release apk
+        run: ./gradlew assembleRelease --stacktrace
         
       # - name: Get release file apk path
       #   id: releaseApk
@@ -49,7 +45,7 @@ jobs:
         # ID used to access action output
         id: sign_app
         with:
-          releaseDirectory: /home/runner/work/AudiobookTest/AudiobookTest/android/app/release
+          releaseDirectory: app/build/outputs/apk/release
           signingKeyBase64: ${{ secrets.KEYSTORE_BASE_64 }}
           alias: ${{ secrets.KEY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
