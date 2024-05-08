@@ -49,7 +49,7 @@ jobs:
         # ID used to access action output
         id: sign_app
         with:
-          releaseDirectory: app/build/outputs/apk/release
+          releaseDirectory: /home/runner/work/AudiobookTest/AudiobookTest/android/app/release
           signingKeyBase64: ${{ secrets.KEYSTORE_BASE_64 }}
           alias: ${{ secrets.KEY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
